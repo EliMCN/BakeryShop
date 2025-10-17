@@ -1,0 +1,42 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: transparent; 
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky; 
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+  border-radius: 50%;
+  transition: height 0.3s ease;
+}
+
+/* Media Query for small screens */
+@media (max-width: 767px) {
+  .main-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* Media Query for tablets */
+@media (min-width: 768px) {
+  .logo {
+    height: 100px;
+  }
+}
+
+/* Media Query for desktop monitors */
+@media (min-width: 1024px) {
+  .logo {
+    height: 110px;
+  }
+}

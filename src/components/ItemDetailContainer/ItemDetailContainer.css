@@ -1,0 +1,7 @@
+.item-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem 2rem; 
+  min-height: calc(100vh - 10rem); 
+}
