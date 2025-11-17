@@ -6,7 +6,7 @@ import { CartProvider } from "./context/CartContext/CartProvider";
 import { AuthProvider } from "./context/AuthContex/AuthProvider"; 
 import { CartContainer } from "./components/CartContainer/CartContainer";
 import { RutaProtegida } from "./components/RutaProtegida/RutaProtegida";
-import { Login } from "./components/Login/login.jsx";
+import { Login } from "./components/Login/Login.jsx";
 import { AdminLayout } from "./layout/AdminLayout.jsx"; 
 import { ProductFormContainer } from "./components/adminComponents/ProductFormContainer/ProductFormContainer";
 import { PublicLayout } from "./layout/PublicLayout.jsx";
