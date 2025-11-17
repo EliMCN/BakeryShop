@@ -1,3 +1,6 @@
+//src\components\UnderConstruction\UnderConstruction.jsx
+//La pagina se renderizo en la pre-entrega del T.P. Ahora se utilizan los filtros en el containerList por category
+
 import { Link } from "react-router-dom";
 import "./UnderConstruction.css";
 

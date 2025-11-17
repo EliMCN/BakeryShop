@@ -11,7 +11,7 @@ export const CartWidget = () => {
     <Link to="/cart" className="cart-widget">
       {/* carrito img:ícono de Font Awesome */}
       <i className="fa-solid fa-cart-shopping"></i>
-      {/* Solo mostramos el número si hay productos en el carrito */}
+      {/* se muestra el numerito si hay productos en el carrito */}
       {quantity > 0 && <span className="cart-quantity">{quantity}</span>}
     </Link>
   );

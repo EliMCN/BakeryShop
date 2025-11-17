@@ -14,7 +14,7 @@ export const ItemDetail = ({ detail }) => {
     alert(`You added ${quantity} "${detail.name}" to the cart.`);
   };
 
-  const { name, price, description, imageUrl } = detail;
+  const { name, price, description, imageUrl, stock } = detail;
 
   return (
     <div className="item-detail">
@@ -24,8 +24,8 @@ export const ItemDetail = ({ detail }) => {
         <p>{description}</p>
         <p>Price: ${price}</p>
       </div>
-      {/* 3. We use the counter and pass it the `onAdd` function */}
-      <ItemCount onAdd={onAdd} />
+      {/* 3. We use the counter and pass it the `onAdd` and `stock` functions */}
+      <ItemCount stock={stock} onAdd={onAdd} />
       <Link to="/" className="continue-shopping-btn">
         Seguir comprando
       </Link>

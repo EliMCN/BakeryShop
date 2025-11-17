@@ -3,21 +3,21 @@ import { CartWidget } from "../CartWidget/CartWidget";
 import "./Nav.css";
 
 export const Nav = () => {
-  // Creo componenete CartWidget al final de la lista de navegación para mostrar el numerito
   return (
     <nav>
       <ul>
         <li>
           <Link to={"/"}>Home</Link>
         </li>
-        <li>
-          <Link to={"/category/salado"}>Salado</Link>
-        </li>
-        <li>
-          <Link to={"/category/dulce"}>Dulce</Link>
+        <li>         
+          <Link to={"/productos"}>Nuestros Productos</Link>
         </li>
         <li>
           <CartWidget />
+        </li>
+        {/* El botón de Login es la única parte relacionada a la autenticación en el header público para facilitar el acceso en la corrección del T.p.*/}
+        <li>
+          <Link to={"/login"}>Admin Login</Link>
         </li>
       </ul>
     </nav>

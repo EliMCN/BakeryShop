@@ -1,0 +1,104 @@
+.formContainer {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+    outline: none;
+    border-color: #a0522d; /* Sienna */
+    box-shadow: 0 0 5px rgba(160, 82, 45, 0.5);
+}
+
+.formGroup input[type="file"] {
+    border: none;
+    background-color: #fff;
+    padding: 0.5rem;
+}
+
+.formGroup input[type="file"]::file-selector-button {
+    background-color: #a0522d;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formGroup input[type="file"]::file-selector-button:hover {
+    background-color: #8b4513; /* SaddleBrown */
+}
+
+.error {
+    color: #d9534f;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.btn {
+    padding: 0.9rem 1.5rem;
+    background-color: #28a745; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 1rem;
+}
+
+.btn:hover:not(:disabled) {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.loadingText {
+    font-style: italic;
+}

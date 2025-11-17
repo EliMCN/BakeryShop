@@ -2,52 +2,79 @@ import { useEffect, useState } from "react";
 import { CartContext } from "./CartContext";
 
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
-  const [total, setTotal] = useState(0);
+ 
+  const [cartItems, setCartItems] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
   const [quantity, setQuantity] = useState(0);
 
-  // Recalculate total and quantity whenever the cart changes
+  // Recalcula el total y la cantidad cada vez que el carrito cambia
   useEffect(() => {
-    const newTotal = cart.reduce((acc, prod) => acc + prod.price * prod.quantity, 0);
-    const newQuantity = cart.reduce((acc, prod) => acc + prod.quantity, 0);
-    setTotal(newTotal);
+    const newQuantity = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+    const newTotalPrice = cartItems.reduce(
+      (acc, item) => acc + item.product.price * item.quantity,
+      0
+    );
+    setTotalPrice(newTotalPrice);
     setQuantity(newQuantity);
-  }, [cart]);
-  
-  const getCartQuantity = () => {
-    return cart.reduce((acc, prod) => acc + prod.quantity, 0);
-  };
+  }, [cartItems]);
 
   const isInCart = (id) => {
-    return cart.some((prod) => prod.id === id);
+    return cartItems.some((item) => item.product.id === id);
   };
 
   const addItem = (item, quantity) => {
     if (isInCart(item.id)) {
-      // If the product is already in the cart, update its quantity
-      setCart(
-        cart.map((prod) =>
-          prod.id === item.id
-            ? { ...prod, quantity: prod.quantity + quantity }
-            : prod
-        )
+      // Si el producto ya está, actualizamos su cantidad
+      setCartItems((prevItems) =>
+        prevItems.map((cartItem) => {
+          if (cartItem.product.id === item.id) {
+            const newQuantity = cartItem.quantity + quantity;
+            // Validar contra el stock disponible
+            if (newQuantity > item.stock) {              
+              console.warn(`No se puede agregar más stock de ${item.name}`);
+              return cartItem; // No se modifica
+            }
+            return { ...cartItem, quantity: newQuantity };
+          }
+          return cartItem;
+        })
       );
     } else {
-      // If it's a new product, add it to the cart
-      setCart([...cart, { ...item, quantity }]);
+      // Si es un producto nuevo, lo agregamos
+      setCartItems((prevItems) => [...prevItems, { product: item, quantity }]);
+    }
+  };
+
+  // Función para actualizar la cantidad desde el carrito
+  const updateItemQuantity = (productId, newQuantity) => {
+    if (newQuantity <= 0) {
+      removeItem(productId); // Si la cantidad es 0 o menos, lo eliminamos
+    } else {
+      setCartItems((prevItems) =>
+        prevItems.map((item) =>
+          item.product.id === productId ? { ...item, quantity: newQuantity } : item
+        )
+      );
     }
   };
 
   const removeItem = (id) => {
-    setCart(cart.filter((prod) => prod.id !== id));
+    setCartItems((prevItems) => prevItems.filter((item) => item.product.id !== id));
   };
 
   const clearCart = () => {
-    setCart([]);
+    setCartItems([]);
   };
 
-  // Create the 'value' object that will be accessible by child components
-  const value = { cart, total, quantity, addItem, removeItem, clearCart, isInCart, getCartQuantity };
+  const value = {
+    cartItems,
+    totalPrice,
+    quantity,
+    addItem,
+    removeItem,
+    clearCart,
+    updateItemQuantity, 
+  };
 
   return (
     <CartContext.Provider value={value}>{children}</CartContext.Provider>

@@ -3,24 +3,37 @@
  
 }
 
+.filter-container {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filter-container select {
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
 .hero-title {  
-  position: relative; /* Needed for z-index on children */
+  position: relative; 
   margin: 1rem 0;
   text-align: center;
-  background-image: url("/images/Bakery.png");
+  background-image: url("../../assets/Bakery.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 20px;
-  min-height: 50vh;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.hero-title h1 {
-  position: relative; /* Allow z-index */
-  z-index: 1; /* Ensure text is above the background */
+.hero-title h2 {
+  position: relative; 
+  z-index: 1; 
   font-family: "Playfair Display", serif; 
   font-size: 4rem; 
   font-weight: 700;
@@ -30,22 +43,22 @@
 }
 
 .hero-subtitle {
-  position: relative; /* Allow z-index */
-  z-index: 1; /* Ensure text is above the background */
-  font-size: 1.25rem; 
-  color: #6b4f4b;
+  position: relative; 
+  z-index: 1;
+  font-size: 1.5rem; 
+  color: #5a3e36;
   margin-top: 0.5rem;
-  font-style: italic;
+  font-weight: 600;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Responsive */
 @media (max-width: 768px) {
   .hero-title {
     min-height: 40vh;
-    padding: 2rem 0; /* Reduce padding on smaller screens */
+    padding: 2rem 0; 
   }
 
   .hero-title h1 {
-    font-size: 2rem; /* Smaller font size for the main title */
+    font-size: 2rem; 
   }
 }

@@ -5,7 +5,8 @@
     "price": 4500,
     "category": "dulce",
     "description": "Budín húmedo de limón con glaseado casero.",
-    "imageUrl": "/images/budin-limon.jpg"
+    "imageUrl": "https://i.ibb.co/nqkH7kq8/budin-limon.jpg",
+    "stock": 15
   },
   {
     "id": "2",
@@ -13,14 +14,178 @@
     "price": 3200,
     "category": "salado",
     "description": "Hogaza de 750 g con fermentación lenta de 24 horas.",
-    "imageUrl": "/images/pan-masa-madre.jpg"
+    "imageUrl": "https://i.ibb.co/TDhLLJYs/pan-masa-madre.jpg",
+    "stock": 8
   },
   {
     "id": "3",
     "name": "Croissant de manteca",
-    "category": "dulce",
     "price": 1200,
+    "category": "dulce",
     "description": "Hojaldre 100% manteca, crujiente por fuera y tierno por dentro.",
-    "imageUrl": "/images/croissant.jpg"
+    "imageUrl": "https://i.ibb.co/MkT1ZGkt/croissant.jpg",
+    "stock": 25
+  },
+  {
+    "id": "4",
+    "name": "Cupcakes de vainilla con frutos rojos",
+    "price": 1800,
+    "category": "dulce",
+    "description": "Masa de vainilla con cobertura de crema y topping de frutillas, frambuesas y arándanos.",
+    "imageUrl": "https://i.ibb.co/j9LD8DJ4/cup-cakes.jpg",
+    "stock": 24
+  },
+  {
+    "id": "5",
+    "name": "Donas con chocolate",
+    "price": 1500,
+    "category": "dulce",
+    "description": "Donas glaseadas con cobertura de chocolate y granas.",
+    "imageUrl": "https://i.ibb.co/W4F04h1q/donuts-chocolate.jpg",
+    "stock": 36
+  },
+  {
+    "id": "6",
+    "name": "Pan casero hogaza grande",
+    "price": 3800,
+    "category": "salado",
+    "description": "Hogaza rústica con corteza crocante y miga aireada.",
+    "imageUrl": "https://i.ibb.co/ch1qLSFj/pan-casero-hogaza-grande.jpg",
+    "stock": 10
+  },
+  {
+    "id": "7",
+    "name": "Pan francés (baguette)",
+    "price": 900,
+    "category": "salado",
+    "description": "Baguette clásica de fermentación corta, ideal para sandwiches.",
+    "imageUrl": "https://i.ibb.co/ZRYfqMQx/pan-frances.jpg",
+    "stock": 40
+  },
+  {
+    "id": "8",
+    "name": "Pasta frola de dulce de batata",
+    "price": 4200,
+    "category": "dulce",
+    "description": "Clásica tarta artesanal con trenzado y relleno de dulce de batata.",
+    "imageUrl": "https://i.ibb.co/p6vT7C8w/pasta-frola-dulce-batata.jpg",
+    "stock": 12
+  },
+  {
+    "id": "9",
+    "name": "Torta crumble de frutos rojos",
+    "price": 5200,
+    "category": "dulce",
+    "description": "Bizcocho suave con capa de frutos rojos y crumble crocante.",
+    "imageUrl": "https://i.ibb.co/qL3D8kFq/torta-cramble-frutos-rojos.jpg",
+    "stock": 6
+  },
+  {
+    "id": "10",
+    "name": "Bollos de manteca",
+    "price": 900,
+    "category": "salado",
+    "description": "Panes individuales esponjosos, perfectos para el mate o el desayuno.",
+    "imageUrl": "https://i.ibb.co/svG2YTCk/bollos-manteca.jpg",
+    "stock": 30
+  },
+  {
+    "id": "11",
+    "name": "Budín marmolado de chocolate",
+    "price": 4700,
+    "category": "dulce",
+    "description": "Budín tipo marmolado con baño de chocolate.",
+    "imageUrl": "https://i.ibb.co/HfvmvmP7/budin-marmolado-chocolate.jpg",
+    "stock": 14
+  },
+  {
+    "id": "12",
+    "name": "Churros azucarados",
+    "price": 700,
+    "category": "dulce",
+    "description": "Churros recién fritos espolvoreados con azúcar impalpable.",
+    "imageUrl": "https://i.ibb.co/rK07fhYq/churros.jpg",
+    "stock": 50
+  },
+  {
+    "id": "13",
+    "name": "Bombón surtido (1 kg)",
+    "price": 9800,
+    "category": "dulce",
+    "description": "Selección artesanal de bombones surtidos por kilo.",
+    "imageUrl": "https://i.ibb.co/vC6z4tcQ/bombon-surtido-kg.jpg",
+    "stock": 10
+  },
+  {
+    "id": "14",
+    "name": "Chipa (docena)",
+    "price": 1600,
+    "category": "salado",
+    "description": "Clásicos chipás de queso, crocantes por fuera y tiernos por dentro.",
+    "imageUrl": "https://i.ibb.co/kgzvRWM8/chipa.jpg",
+    "stock": 24
+  },
+  {
+    "id": "15",
+    "name": "Empanadas de carne (docena)",
+    "price": 2400,
+    "category": "salado",
+    "description": "Docena de empanadas de carne cortada a cuchillo.",
+    "imageUrl": "https://i.ibb.co/5gMM5vy7/empanadas-carne.jpg",
+    "stock": 18
+  },
+  {
+    "id": "16",
+    "name": "Empanadas de pollo (docena)",
+    "price": 2300,
+    "category": "salado",
+    "description": "Docena de empanadas rellenas de pollo especiado.",
+    "imageUrl": "https://i.ibb.co/QvGWTdzK/empanadas-pollo.jpg",
+    "stock": 18
+  },
+  {
+    "id": "17",
+    "name": "Finger de salchichas",
+    "price": 1900,
+    "category": "salado",
+    "description": "Bocados de hojaldre rellenos de salchichas, listos para picar.",
+    "imageUrl": "https://i.ibb.co/GvRC1mzS/finger-salchichas.jpg",
+    "stock": 20
+  },
+  {
+    "id": "18",
+    "name": "Rolls de canela (pack x4)",
+    "price": 2100,
+    "category": "dulce",
+    "description": "Rolls esponjosos con canela y glaseado suave.",
+    "imageUrl": "https://i.ibb.co/8g89VMSJ/rolls-canela.jpg",
+    "stock": 22
+  },
+  {
+    "id": "19",
+    "name": "Tarta de espinacas",
+    "price": 4600,
+    "category": "salado",
+    "description": "Tarta casera de espinacas con masa artesanal.",
+    "imageUrl": "https://i.ibb.co/Y7D7gT4x/tarta-espinacas.jpg",
+    "stock": 12
+  },
+  {
+    "id": "20",
+    "name": "Tarta de manzana y nuez",
+    "price": 5400,
+    "category": "dulce",
+    "description": "Tarta de manzana con crocante de nuez y toque de canela.",
+    "imageUrl": "https://i.ibb.co/Fb3FqPJY/tarta-manzana-nuez.jpg",
+    "stock": 10
+  },
+  {
+    "id": "21",
+    "name": "Tiramisú (porción grande)",
+    "price": 5600,
+    "category": "dulce",
+    "description": "Clásico tiramisú italiano con mascarpone y cacao.",
+    "imageUrl": "https://i.ibb.co/jZLxxDcD/tiramisu.jpg",
+    "stock": 14
   }
 ]

@@ -1,0 +1,10 @@
+# Información del Proyecto
+Autor: Elizabeth Mc Nally
+Instructora: Belen Romero
+Tutor: Nicolás Duarte
+
+## Repositorio en GitHub
+https://github.com/EliMCN/BakeryShop
+
+## Sitio Desplegado en Netlify
+https://talento-bakeryshop.netlify.app/

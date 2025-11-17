@@ -1,0 +1,67 @@
+.homeContainer {
+    width: 100%;
+}
+
+.banner {
+    position: relative; /* Necesario para posicionar el video y el contenido */
+    overflow: hidden; /* Oculta cualquier parte del video que se salga del contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    min-height: 60vh; /* Aumentamos un poco la altura para más impacto */
+    color: white;
+    margin-bottom: 2rem; /* Espacio entre el banner y la lista de productos */
+}
+
+.bannerVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Coloca el video detrás del contenido */
+    object-fit: cover; /* Asegura que el video cubra todo el espacio */
+}
+
+.bannerContent {
+    max-width: 800px;
+    position: relative; /* Asegura que el contenido esté sobre el video */
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para legibilidad */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.bannerTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    margin-bottom: 1rem;
+}
+
+.bannerSubtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.bannerButton {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #a0522d; /* Sienna */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.bannerButton:hover {
+    background-color: #8b4513; /* SaddleBrown */
+    transform: translateY(-2px);
+}

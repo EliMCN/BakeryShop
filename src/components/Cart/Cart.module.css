@@ -1,0 +1,259 @@
+.cart-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+/* Estilos para el carrito vacío */
+.emptyCartContainer {
+  text-align: center;
+  padding: 50px;
+}
+
+.emptyCartContainer p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Estilos base para botones */
+.buttonBase {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.buttonBase:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.backButton {
+  background-color: #6c757d;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+.backButton:hover {
+  background-color: #5a6268;
+}
+
+.itemInfo {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.itemDetails h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.itemDetails p {
+  margin: 0;
+  color: #555;
+  font-weight: bold;
+}
+
+/* Estructura de Tabla para el Carrito */
+.cartTable {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.cartHeader {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1.5fr 1fr 0.5fr; /* Columnas para Producto, Precio, Cantidad, Subtotal, Acción */
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #ddd;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+}
+
+.headerProduct {
+  text-align: left;
+}
+
+/* Estilos para cada fila de producto */
+.cartItem {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1.5fr 1fr 0.5fr;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.cartItem:last-child {
+  border-bottom: none;
+}
+
+.productCell {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+.cartItemImage {
+  width: 80px; 
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.productInfo h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.price, .subtotal {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.quantityControl {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.quantityButton {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.itemQuantity {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.btnRemoveItem {
+  background-color: #dc3545;
+  color: white;
+  padding: 0.6rem;
+}
+.btnRemoveItem:hover {
+  background-color: #c82333;
+}
+
+.cart-summary {
+  border-top: 2px solid #eee;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.cartTotal {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btnCheckout {
+  background-color: #28a745;
+  color: white;
+}
+.btnCheckout:hover {
+  background-color: #218838;
+}
+
+.btnContinueShopping {
+  background-color: #a0522d; /* Sienna */
+  color: white;
+}
+.btnContinueShopping:hover {
+  background-color: #8b4513; /* SaddleBrown */
+}
+.btnClear {
+  background-color: #6c757d;
+  color: white;
+}
+.btnClear:hover {
+  background-color: #5a6268;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+/* --- Media Query para pantallas pequeñas (móviles) --- */
+@media (max-width: 767px) {
+  .cartTable {
+    width: 100%; 
+  }
+
+  /* Ocultamos los encabezados de la tabla en móvil */
+  .cartHeader {
+    display: none;
+  }
+
+  /* Convertimos cada fila en una tarjeta */
+  .cartItem {
+    display: block; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    position: relative; /* Para posicionar el botón de eliminar */
+  }
+
+  /* Ajustamos las celdas para que se apilen y tengan etiquetas */
+  .price, .quantityControl, .subtotal {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0.75rem 0;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  /* Añadimos etiquetas de texto usando pseudo-elementos */
+  .price::before {
+    content: 'Precio:';
+    font-weight: normal;
+    color: #666;
+  }
+  .quantityControl::before {
+    content: 'Cantidad:';
+    font-weight: normal;
+    color: #666;
+  }
+  .subtotal::before {
+    content: 'Subtotal:';
+    font-weight: normal;
+    color: #666;
+  }
+
+  /* Reposicionamos el botón de eliminar en la esquina superior derecha de la tarjeta */
+  .btnRemoveItem {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

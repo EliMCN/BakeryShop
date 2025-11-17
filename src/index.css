@@ -27,7 +27,7 @@ li {
 
 body { 
    min-height: 100vh;  
-  background-image: url('/images/bakery-bg.png'); 
+  background-image: url('./assets/bakery-bg.png'); 
   background-size: cover; 
   background-position: center;
   background-attachment: fixed; 
